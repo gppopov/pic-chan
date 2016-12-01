@@ -41,8 +41,8 @@ OuterLoop:
 			if isAnchor {
 				for _, a := range t.Attr {
 					if a.Key == "href" {
-						isJpg, _ := regexp.MatchString("file_store", a.Val)
-						if isJpg {
+						isMediaImg, _ := regexp.MatchString("file_store", a.Val)
+						if isMediaImg {
 							urls = append(urls, a.Val)
 							i++
 							break
